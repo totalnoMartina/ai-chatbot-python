@@ -6,7 +6,9 @@
                 " what's up",
                 "good day"
             ],
-            "responses": ["Hello", "Hey", "What can I do for you?", "I am your friend!"]
+            "responses": ["Hello", "Hey", "What can I do for you?",
+                "I am your friend!"
+            ]
         },
         {
             "tag": "goodbye",
@@ -26,7 +28,8 @@
                 "Can we meet?",
                 "Who are you?"
             ],
-            "responses": ["My name is BestBot", "You can call me BestBot", "I am artifically made friend, call me BestBot",
+            "responses": ["My name is BestBot", "You can call me BestBot",
+                "I am artifically made friend, call me BestBot",
                 "Nice to meet you, Bestbot!"
             ]
         },
@@ -49,7 +52,8 @@
             ],
             "responses": ["Being a friend is human, yet as a bot, I can do that too",
                 "I am learning how to be your friend, teach me!",
-                "I am artifically made friend, with your help, I will be a better friend!"
+                "I am artifically made friend, with your help, I will be a better friend!",
+                "I will always listen to you"
             ]
         }
 

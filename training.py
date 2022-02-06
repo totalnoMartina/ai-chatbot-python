@@ -1,4 +1,4 @@
-# import os
+import os
 import random
 import json
 import pickle
@@ -10,6 +10,8 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 lemmatizer = WordNetLemmatizer()
 
@@ -58,15 +60,16 @@ train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),),activation='relu'))
+model.add(Dense(128, activation='relu', input_shape=(len(train_x[0]),)))
 model.add(Dropout(0.5))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation='softmax'))
 
 sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(optimizer=sgd, loss='categorical_crossentropy', metrics=['accuracy'])
 
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+# model.fit(array_combine, epochs=200, batch_size=5, verbose=1)
 model.save('chatbot.model.model')
 print('Done')
