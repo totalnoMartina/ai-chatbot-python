@@ -10,7 +10,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 
-lemmatizer = WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents.json').read())
 
@@ -31,4 +31,34 @@ for intent in intents["intents"]:
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
 
-print(words)
+classes = sorted(set(classes))
+pickle.dump(words, open('words.pkl', 'wb'))
+pickle.dump(words, open('classes.pkl', 'wb'))
+
+# print(words)
+
+traning = []
+output_empty = [0] * len(classes)
+
+for document in documents:
+    bag = []
+    word_patterns = document[0]
+    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
+    for word in words:
+        if word in word_patterns:
+            bag.append(1) if word in word_patterns else bag.append(0)
+
+    output_rows = list(output_empty)
+    output_rows[classes.index(document[1])] = 1
+    traning.append([bag, output_row])
+
+random.shuffle(training)
+traning = np.array(traning)
+
+train_x = list(training[:, 0])
+train_y = list(training[:, 1])
+
+model = Sequential()
+model.add(Dense(128, input_shape=(len(train_x[0]),) Activation = 'relu'))
+model.add(Dropout(0.5))
+model.add(Dense(64, Activation='relu'))
