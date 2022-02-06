@@ -6,9 +6,7 @@
                 " what's up",
                 "good day"
             ],
-            "responses": ["Hello", "Hey", "What can I do for you?",
-                "Need a chat?", "I am your friend!"
-            ]
+            "responses": ["Hello", "Hey", "What can I do for you?", "I am your friend!"]
         },
         {
             "tag": "goodbye",
@@ -17,7 +15,7 @@
                 "Enjoy",
                 "later"
             ],
-            "responses": ["Bye", "Later", "See ya'",
+            "responses": ["Bye", "Later",
                 "Goodbye", "Enjoy"
             ]
         },
@@ -29,7 +27,7 @@
                 "Who are you?"
             ],
             "responses": ["My name is BestBot", "You can call me BestBot", "I am artifically made friend, call me BestBot",
-                "Nice to meet you, Bestbot!", "I am your friend, Bestbot!"
+                "Nice to meet you, Bestbot!"
             ]
         },
         {
@@ -39,7 +37,9 @@
                 "What is your activated state of service?",
                 "What are your hours?"
             ],
-            "responses": ["24/7"]
+            "responses": ["24/7", "All day, and all night",
+                "Whenever you need me", "As long as I am on"
+            ]
         }, {
             "tag": "friend",
             "patterns": ["Do you want to be my friend?",
@@ -47,8 +47,9 @@
                 "Good friends are here for each other, I am here for you.",
                 "You are doing the best you can, therefore you are the best!"
             ],
-            "responses": ["Being a friend is human, yet as a bot, I can do that too", "I am learning how to be your friend, teach me!", "I am artifically made friend, with your help, I will be a better friend!",
-                "Being your friend is all I am made for", "I am your friend, Bestbot! I am here to learn about you!"
+            "responses": ["Being a friend is human, yet as a bot, I can do that too",
+                "I am learning how to be your friend, teach me!",
+                "I am artifically made friend, with your help, I will be a better friend!"
             ]
         }
 
