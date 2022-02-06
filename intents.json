@@ -1,6 +1,6 @@
 {
     "intents": [{
-            "tags": "greetings",
+            "tag": "greetings",
             "patterns": ["hi",
                 "hello",
                 " what's up",
@@ -11,7 +11,7 @@
             ]
         },
         {
-            "tags": "goodbye",
+            "tag": "goodbye",
             "patterns": ["bye",
                 "see ya'",
                 "Enjoy",
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "tags": "name",
+            "tag": "name",
             "patterns": ["What is your name?",
                 "And your name is?",
                 "Can we meet?",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "tags": "hours",
+            "tag": "hours",
             "patterns": ["How long are you available to serve?",
                 "How many hours do you work?",
                 "What is your activated state of service?",
@@ -41,14 +41,13 @@
             ],
             "responses": ["24/7"]
         }, {
-            "tags": "friend",
+            "tag": "friend",
             "patterns": ["Do you want to be my friend?",
                 "I can listen to you forever! I understand!",
                 "Good friends are here for each other, I am here for you.",
                 "You are doing the best you can, therefore you are the best!"
             ],
-            "responses": ["Being a friend is human, yet as a bot, I can do that too", "I am learning how to be your friend, teach me!", "
-                I am artifically made friend, with your help, I will be a better friend!",
+            "responses": ["Being a friend is human, yet as a bot, I can do that too", "I am learning how to be your friend, teach me!", "I am artifically made friend, with your help, I will be a better friend!",
                 "Being your friend is all I am made for", "I am your friend, Bestbot! I am here to learn about you!"
             ]
         }
